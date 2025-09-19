@@ -23,7 +23,7 @@ export default function Home() {
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Navigation */}
         <nav className="flex justify-between items-center p-8">
-          <div className="text-2xl font-bold text-white">Gaea Network</div>
+          <div></div>
         </nav>
 
         {/* Main content */}
