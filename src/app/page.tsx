@@ -27,8 +27,8 @@ export default function Home() {
         {/* Main content */}
         <div className="flex-1 flex items-center justify-center px-8">
           <div className="max-w-3xl mx-auto text-center">
-            {/* Main title with reduced size and same width as text */}
-            <h1 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight text-white">
+            {/* Main title with professional font */}
+            <h1 className="text-3xl md:text-4xl title-large mb-8 tracking-tight text-white">
               The Gaea Network
             </h1>
 

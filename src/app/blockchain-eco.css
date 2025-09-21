@@ -38,6 +38,19 @@ body {
   overflow-x: hidden;
 }
 
+/* Professional Title Fonts - Only for titles */
+.title-font {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.title-large {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
 /* Forest Aerial View Texture - Real Image */
 .forest-texture {
   position: relative;
