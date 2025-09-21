@@ -1,0 +1,279 @@
+/* Blockchain + Environmental Conservation Theme */
+@import "tailwindcss";
+
+:root {
+  /* Blockchain Tech Colors */
+  --blockchain-primary: #00d4aa;      /* Teal/Mint - digital currency feel */
+  --blockchain-secondary: #0066cc;    /* Electric blue */
+  --blockchain-accent: #ff6b35;       /* Orange - energy/mining */
+  --blockchain-dark: #0a0f1c;         /* Deep space dark */
+  --blockchain-matrix: #00ff41;       /* Matrix green */
+  
+  /* Environmental Colors */
+  --nature-primary: #2d5016;          /* Deep forest green */
+  --nature-secondary: #7cb342;        /* Fresh leaf green */
+  --nature-earth: #8d6e63;            /* Earth brown */
+  --nature-sky: #81c784;              /* Sky green */
+  --nature-ocean: #26a69a;            /* Ocean teal */
+  
+  /* Combined Palette */
+  --eco-tech-primary: #00a693;        /* Hybrid teal-green */
+  --eco-tech-secondary: #4caf50;      /* Vibrant eco green */
+  --eco-tech-accent: #00bcd4;         /* Cyan tech */
+  --eco-tech-dark: #1b2e1f;           /* Dark forest */
+  --eco-tech-light: #e8f5e8;          /* Light eco */
+  
+  /* Background gradients */
+  --bg-tech-gradient: linear-gradient(135deg, var(--blockchain-dark) 0%, #1a3a2e 50%, var(--nature-primary) 100%);
+  --bg-eco-gradient: linear-gradient(45deg, var(--nature-primary) 0%, var(--eco-tech-primary) 100%);
+  --bg-matrix-pattern: radial-gradient(circle at 25% 25%, var(--blockchain-matrix) 0%, transparent 50%),
+                       radial-gradient(circle at 75% 75%, var(--eco-tech-accent) 0%, transparent 50%);
+}
+
+/* Global Theme */
+body {
+  background: var(--bg-tech-gradient);
+  color: var(--eco-tech-light);
+  font-family: 'Courier New', 'Monaco', 'SF Mono', monospace;
+  overflow-x: hidden;
+}
+
+/* Forest Aerial View Texture - Real Image */
+.forest-texture {
+  position: relative;
+}
+
+.forest-texture::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+  filter: grayscale(20%) contrast(1.1);
+}
+
+/* Blockchain Tech Elements - Clean Minimalist */
+.blockchain-card {
+  background: rgba(0, 212, 170, 0.05);
+  border: 1px solid var(--blockchain-primary);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  /* Removed all box-shadow for clean look */
+  transition: all 0.3s ease;
+}
+
+.blockchain-card:hover {
+  background: rgba(0, 212, 170, 0.08);
+  transform: translateY(-1px);
+}
+
+.tech-border {
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, var(--blockchain-primary), var(--eco-tech-accent)) border-box;
+  border-radius: 10px;
+}
+
+/* Matrix/Code Effect - No Glow */
+.matrix-text {
+  font-family: 'Courier New', monospace;
+  color: var(--blockchain-matrix);
+  /* Removed all text-shadow for clean look */
+}
+
+/* Environmental Elements - Clean Minimalist */
+.eco-gradient-text {
+  background: linear-gradient(45deg, var(--nature-secondary), var(--eco-tech-primary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.nature-card {
+  background: rgba(76, 175, 80, 0.05);
+  border: 1px solid var(--nature-secondary);
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  /* Removed all box-shadow for clean look */
+}
+
+/* Hybrid Blockchain-Eco Elements - Clean Minimalist */
+.eco-tech-button {
+  background: linear-gradient(45deg, var(--eco-tech-primary), var(--blockchain-primary));
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.eco-tech-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transition: left 0.5s;
+}
+
+.eco-tech-button:hover::before {
+  left: 100%;
+}
+
+.eco-tech-button:hover {
+  transform: scale(1.01);
+  /* Removed all box-shadow for clean look */
+}
+
+/* Network/Connection Lines - Removed for Clean Look */
+.network-lines {
+  position: relative;
+  /* Removed all background patterns for minimalist design */
+}
+
+/* Organic Tech Shapes */
+.organic-tech {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  background: var(--bg-eco-gradient);
+  animation: morphShape 8s ease-in-out infinite;
+}
+
+@keyframes morphShape {
+  0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  25% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+  50% { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
+  75% { border-radius: 30% 70% 30% 70% / 70% 30% 70% 30%; }
+}
+
+/* Data Visualization Inspired Elements */
+.data-bar {
+  height: 4px;
+  background: linear-gradient(90deg, var(--blockchain-primary) 0%, var(--nature-secondary) 100%);
+  border-radius: 2px;
+  animation: dataFlow 3s ease-in-out infinite;
+}
+
+@keyframes dataFlow {
+  0% { width: 0%; }
+  50% { width: 100%; }
+  100% { width: 0%; }
+}
+
+/* Blockchain Block Inspired Cards */
+.block-card {
+  background: var(--blockchain-dark);
+  border: 2px solid var(--blockchain-primary);
+  border-left: 5px solid var(--nature-secondary);
+  padding: 20px;
+  margin: 10px 0;
+  position: relative;
+  font-family: monospace;
+}
+
+.block-card::before {
+  content: 'BLOCK #' counter(block-counter);
+  counter-increment: block-counter;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: var(--blockchain-dark);
+  color: var(--blockchain-primary);
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.block-chain {
+  counter-reset: block-counter;
+}
+
+/* Environmental Progress Indicators */
+.eco-progress {
+  width: 100%;
+  height: 20px;
+  background: rgba(45, 80, 22, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.eco-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--nature-secondary), var(--eco-tech-primary));
+  border-radius: 10px;
+  transition: width 1s ease;
+  position: relative;
+}
+
+.eco-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Utility Classes */
+.text-blockchain { color: var(--blockchain-primary); }
+.text-eco { color: var(--nature-secondary); }
+.text-eco-tech { color: var(--eco-tech-primary); }
+.bg-blockchain { background-color: var(--blockchain-primary); }
+.bg-eco { background-color: var(--nature-secondary); }
+.bg-eco-tech { background-color: var(--eco-tech-primary); }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blockchain-card,
+  .nature-card {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .eco-tech-button {
+    padding: 10px 20px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .blockchain-card,
+  .nature-card {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+}
