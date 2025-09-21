@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./blockchain-eco.css";
 import { Providers } from "./providers";
 import { Sidebar } from "@/components/Sidebar";
 

@@ -49,12 +49,18 @@ export function Sidebar() {
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         lg:translate-x-0 lg:static lg:z-auto
       `}>
-        {/* Sidebar header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-700">
-          <h1 className="text-xl font-bold text-white">Gaea Network</h1>
+        {/* Sidebar header with centered logo */}
+        <div className="flex items-center justify-center p-6 border-b border-gray-700">
+          {/* Gaea Network Logo - Centered and Large */}
+          <img 
+            src="/logo.png" 
+            alt="Gaea Network Logo" 
+            className="w-24 h-24 flex-shrink-0"
+          />
+          {/* Mobile close button */}
           <button
             onClick={closeSidebar}
-            className="lg:hidden p-1 rounded-md text-gray-400 hover:text-white hover:bg-gray-800"
+            className="lg:hidden absolute top-6 right-6 p-1 rounded-md text-gray-400 hover:text-white hover:bg-gray-800"
             aria-label="Close sidebar"
           >
             <XMarkIcon className="h-6 w-6" />

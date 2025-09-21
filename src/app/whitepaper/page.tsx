@@ -4,9 +4,9 @@ import { DocumentTextIcon } from '@heroicons/react/24/outline'
 
 export default function Whitepaper() {
   return (
-    <div className="p-8">
+    <div className="p-8 bg-gray-900 min-h-screen">
       <nav className="flex justify-between items-center mb-12 max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold text-white">Whitepaper</h1>
+        <h1 className="text-3xl title-font text-white">Whitepaper</h1>
       </nav>
       
       <div className="max-w-4xl mx-auto">
