@@ -4,22 +4,24 @@ import { DocumentTextIcon } from '@heroicons/react/24/outline'
 
 export default function Whitepaper() {
   return (
-    <div className="p-8 bg-gray-900 min-h-screen">
-      <nav className="flex justify-between items-center mb-12 max-w-6xl mx-auto">
-        <h1 className="text-3xl title-font text-white">Whitepaper</h1>
-      </nav>
+    <div className="p-8 bg-gray-900 min-h-screen forest-texture">
+      {/* Background overlay with higher opacity for better text readability */}
+      <div className="absolute inset-0 bg-gray-900/95"></div>
+      
+      <div className="relative z-10">
+        <nav className="flex justify-between items-center mb-12 max-w-6xl mx-auto">
+          <h1 className="text-3xl title-font text-white">Whitepaper</h1>
+        </nav>
       
       <div className="max-w-4xl mx-auto">
         <div className="p-8 bg-gray-800 rounded-xl border-2 border-gray-700 shadow-lg">
-          <div className="flex items-center mb-6">
-            <DocumentTextIcon className="h-8 w-8 text-green-400 mr-3" />
-            <h2 className="text-2xl font-bold text-white">Project Gaea</h2>
-            <span className="text-lg text-gray-400 ml-2">Value to our planet&apos;s nature reserves</span>
-          </div>
-          
-          <div className="text-center mb-8 text-gray-400">
-            <p>Gaea Network</p>
-            <p>January, 2025</p>
+          <div className="flex items-start mb-6">
+            <DocumentTextIcon className="h-8 w-8 text-green-400 mr-3 mt-1" />
+            <div>
+              <h2 className="text-2xl font-bold text-white">Project Gaea</h2>
+              <p className="text-lg text-gray-400 mb-1">Value to our planet&apos;s nature reserves</p>
+              <p className="text-sm text-gray-500">Fabian Schroeder - January 2025</p>
+            </div>
           </div>
           
           <div className="prose prose-invert max-w-none">
@@ -175,6 +177,7 @@ export default function Whitepaper() {
                 </blockquote>
               </section>
 
+            </div>
             </div>
           </div>
         </div>
