@@ -10,13 +10,15 @@ import {
   XMarkIcon,
   DocumentTextIcon,
   ClipboardDocumentListIcon,
+  EnvelopeIcon,
 } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Start', href: '/', icon: HomeIcon },
   { name: 'Team', href: '/team', icon: UserGroupIcon },
-  { name: 'Project Plan', href: '/project-plan', icon: ClipboardDocumentListIcon },
   { name: 'Whitepaper', href: '/whitepaper', icon: DocumentTextIcon },
+  { name: 'Project Plan', href: '/project-plan', icon: ClipboardDocumentListIcon },
+  { name: 'Contact', href: '/contact', icon: EnvelopeIcon },
 ]
 
 export function Sidebar() {
