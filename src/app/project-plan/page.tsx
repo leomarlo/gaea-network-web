@@ -1,19 +1,19 @@
 export default function ProjectPlan() {
   return (
-    <div className="p-8 bg-gray-900 min-h-screen forest-texture">
+    <div className="p-8 bg-gray-900 min-h-screen forest-texture theme-bg-primary">
       {/* Forest texture overlay */}
-      <div className="absolute inset-0 bg-gray-900/90"></div>
+      <div className="absolute inset-0 bg-gray-900/90 theme-bg-overlay"></div>
       
       <div className="relative z-10">
         {/* Header */}
         <header className="text-center mb-12">
-          <h1 className="text-3xl font-bold text-white mb-4">Project Plan</h1>
+          <h1 className="text-3xl font-bold text-white mb-4 theme-text-primary">Project Plan</h1>
         </header>
 
         <div className="max-w-4xl mx-auto">
-          <div className="p-8 bg-gray-800 rounded-xl border-2 border-gray-700 shadow-lg">
-            <div className="prose prose-invert max-w-none">
-              <div className="text-gray-300 space-y-6 leading-relaxed">
+          <div className="p-8 bg-gray-800 rounded-xl border border-gray-700 shadow-lg theme-card theme-border-card">
+            <div className="prose prose-invert max-w-none theme-prose">
+              <div className="text-gray-300 space-y-6 leading-relaxed theme-text-content">
                 
                 {/* Patton Quote */}
                 <div className="text-center mb-8">
@@ -27,7 +27,7 @@ export default function ProjectPlan() {
 
                 {/* Phase 0 */}
                 <section>
-                  <h2 className="text-2xl font-bold text-white mb-4">Phase 0: Concept and Core Team</h2>
+                  <h2 className="text-2xl font-bold text-white mb-4 theme-text-primary">Phase 0: Concept and Core Team</h2>
                   <p>
                     The foundation of Project Gaea begins with a rigorous definition of the tokenomics and legal framework to ensure the project's viability and long-term success. Tokenomics will be designed to create a stable, asset-backed cryptocurrency that reflects the real-world value of preserved nature reserves. This involves determining the mechanisms for minting, distributing, and regulating the supply of GaeaCoin, ensuring that its value remains tied to the ecological integrity of tokenized land. A precise valuation model will be developed, incorporating factors such as biodiversity, carbon sequestration potential, and conservation urgency. Simultaneously, we will establish a clear legal structure to ensure compliance with international financial and environmental regulations. This includes securing legal mechanisms for land acquisitions, defining the rights and responsibilities of token holders, and aligning the project with regulatory standards for asset-backed cryptocurrencies. By consulting legal experts in blockchain, finance, and environmental law, we aim to build a legally sound framework that ensures transparency, protects investors, and safeguards the underlying ecological assets.
                   </p>
@@ -38,7 +38,7 @@ export default function ProjectPlan() {
 
                 {/* Phase 1 */}
                 <section>
-                  <h2 className="text-2xl font-bold text-white mb-4">Phase 1: Development of an MVP</h2>
+                  <h2 className="text-2xl font-bold text-white mb-4 theme-text-primary">Phase 1: Development of an MVP</h2>
                   <p>
                     To launch this ambitious initiative, we will leverage crowdfunding to raise €160,000, which will fund the development of a Minimum Viable Product (MVP). This initial phase will establish the technical, legal, and operational foundation for GaeaCoin, ensuring a functional and transparent asset-backed cryptocurrency. The MVP will include:
                   </p>
@@ -55,7 +55,7 @@ export default function ProjectPlan() {
 
                 {/* Phase 2 */}
                 <section>
-                  <h2 className="text-2xl font-bold text-white mb-4">Phase 2: Delivering a Proof-of-Concept</h2>
+                  <h2 className="text-2xl font-bold text-white mb-4 theme-text-primary">Phase 2: Delivering a Proof-of-Concept</h2>
                   <p>
                     In Phase 2, we will acquire the first asset, tokenise it, and generate revenue through carbon credit sales, effectively demonstrating the viability of our economic and technological model. This proof-of-concept will serve as a validation of our strategy and provide real-world data to refine the system before scaling further. Key tasks in this phase include:
                   </p>
@@ -74,7 +74,7 @@ export default function ProjectPlan() {
 
                 {/* Phase 3 */}
                 <section>
-                  <h2 className="text-2xl font-bold text-white mb-4">Phase 3: Scale-Up</h2>
+                  <h2 className="text-2xl font-bold text-white mb-4 theme-text-primary">Phase 3: Scale-Up</h2>
                   <p>
                     With a successful proof-of-concept in place, Phase 3 focuses on expanding the Gaea ecosystem, growing the user base, tokenised land portfolio, and financial sustainability. Over 24 months, we will scale operations, enhance liquidity, and establish GaeaCoin as a widely recognised currency for conservation-driven finance. Key objectives include:
                   </p>
@@ -94,7 +94,7 @@ export default function ProjectPlan() {
 
                 {/* Phase 4 */}
                 <section>
-                  <h2 className="text-2xl font-bold text-white mb-4">Phase 4: Sustainability and Revenue Growth</h2>
+                  <h2 className="text-2xl font-bold text-white mb-4 theme-text-primary">Phase 4: Sustainability and Revenue Growth</h2>
                   <p>
                     With a strong foundation established, Phase 4 focuses on long-term sustainability and financial self-sufficiency. The goal is to transition Gaea into a fully independent ecosystem, where carbon credit revenue and corporate partnerships provide stable funding for ongoing operations, expansions, and conservation efforts. This phase ensures that GaeaCoin remains a viable financial instrument while actively driving large-scale ecological preservation.
                   </p>

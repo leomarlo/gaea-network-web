@@ -39,7 +39,7 @@ export default function Home() {
               </p>
               
 
-              <blockquote className="text-xl md:text-2xl italic my-8 p-6 border-l-4 border-gray-600 bg-gray-800/50">
+              <blockquote className="text-xl md:text-2xl italic my-8 p-6 border-l-4 border-gray-700 bg-gray-800/50">
                 <span className="text-white">
                   &ldquo;You may say I&apos;m a dreamer.<br />
                   But I&apos;m not the only one.&rdquo;
@@ -70,7 +70,6 @@ export default function Home() {
 
         {/* Footer */}
         <div className="p-8 text-center text-gray-400 text-sm">
-          <p>© 2024 Gaea.network - Preserving nature through innovative technology</p>
         </div>
       </div>
     </div>

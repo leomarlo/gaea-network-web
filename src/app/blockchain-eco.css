@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Blockchain Tech Colors */
+  /* Dark Mode Colors */
   --blockchain-primary: #00d4aa;      /* Teal/Mint - digital currency feel */
   --blockchain-secondary: #0066cc;    /* Electric blue */
   --blockchain-accent: #ff6b35;       /* Orange - energy/mining */
@@ -30,12 +30,151 @@
                        radial-gradient(circle at 75% 75%, var(--eco-tech-accent) 0%, transparent 50%);
 }
 
+/* Light Mode Colors */
+:root.light {
+  /* Light Mode Backgrounds */
+  --bg-primary: #ffffff;               /* Pure white */
+  --bg-secondary: #f8f9fa;             /* Light grey */
+  --bg-tertiary: #f1f3f4;              /* Medium light grey */
+  --bg-card: #ffffff;                  /* White cards */
+  --bg-sidebar: #f8f9fa;               /* Light sidebar */
+  
+  /* Light Mode Text Colors */
+  --text-primary: #1a1a1a;             /* Dark grey for main text */
+  --text-secondary: #4a4a4a;           /* Medium grey for secondary text */
+  --text-muted: #6e6e6e;               /* Light grey for muted text */
+  --text-accent: #2e7d32;              /* Subtle green accent */
+  
+  /* Light Mode Borders */
+  --border-light: #e0e0e0;             /* Light border */
+  --border-medium: #c0c0c0;            /* Medium border */
+  --border-dark: #a0a0a0;              /* Darker border */
+  
+  /* Light Mode Green Accents (minimal use) */
+  --green-subtle: #e8f5e9;             /* Very light green background */
+  --green-accent: #4caf50;             /* Green for highlights */
+  --green-border: #81c784;             /* Green for borders */
+}
+
 /* Global Theme */
 body {
   background: var(--bg-tech-gradient);
   color: var(--eco-tech-light);
   font-family: 'Courier New', 'Monaco', 'SF Mono', monospace;
   overflow-x: hidden;
+}
+
+/* Light Mode Global Styles */
+body.light-mode {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+/* Light Mode Overrides for Sidebar */
+.light-mode .bg-gray-900 {
+  background-color: #f8f9fa !important;
+}
+
+.light-mode .border-gray-700 {
+  border-color: #e0e0e0 !important;
+}
+
+.light-mode .text-white {
+  color: #1a1a1a !important;
+}
+
+.light-mode .text-gray-300 {
+  color: #4a4a4a !important;
+}
+
+.light-mode .text-gray-400 {
+  color: #6e6e6e !important;
+}
+
+.light-mode .text-gray-200 {
+  color: #2a2a2a !important;
+}
+
+.light-mode .bg-gray-800 {
+  background-color: #e9ecef !important;
+}
+
+.light-mode .bg-gray-800:hover {
+  background-color: #dee2e6 !important;
+}
+
+.light-mode .text-white:hover {
+  color: #1a1a1a !important;
+}
+
+.light-mode .bg-gray-700:hover {
+  background-color: #ced4da !important;
+}
+
+/* Light Mode for Forest Texture */
+.light-mode .forest-texture::before {
+  opacity: 0.08 !important;
+  filter: grayscale(70%) brightness(1.3) !important;
+}
+
+/* Light Mode for Content Areas */
+.light-mode [class*="bg-gray-900/85"] {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.light-mode [class*="bg-gray-900/90"] {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Light Mode for Cards and Blockquotes */
+.light-mode .border-gray-600 {
+  border-color: #c0c0c0 !important;
+}
+
+.light-mode [class*="bg-gray-800/50"] {
+  background-color: rgba(248, 249, 250, 0.8) !important;
+}
+
+/* Light Mode for Buttons */
+.light-mode .bg-white {
+  background-color: #343a40 !important;
+}
+
+.light-mode .text-gray-900 {
+  color: #ffffff !important;
+}
+
+.light-mode .bg-gray-100:hover {
+  background-color: #495057 !important;
+}
+
+.light-mode .border-white {
+  border-color: #343a40 !important;
+}
+
+.light-mode .text-gray-900:hover {
+  color: #ffffff !important;
+}
+
+/* Light Mode for Green Accents */
+.light-mode .text-green-300 {
+  color: #2e7d32 !important;
+}
+
+.light-mode .text-green-400 {
+  color: #1b5e20 !important;
+}
+
+.light-mode .border-green-500 {
+  border-color: #4caf50 !important;
+}
+
+.light-mode .text-blue-400 {
+  color: #1565c0 !important;
+}
+
+.light-mode .text-blue-300:hover {
+  color: #0d47a1 !important;
 }
 
 /* Professional Title Fonts - Only for titles */
@@ -73,6 +212,12 @@ body {
   filter: grayscale(20%) contrast(1.1);
 }
 
+/* Light Mode Forest Texture - More Subtle */
+.light .forest-texture::before {
+  opacity: 0.05;
+  filter: grayscale(60%) brightness(1.2);
+}
+
 /* Blockchain Tech Elements - Clean Minimalist */
 .blockchain-card {
   background: rgba(0, 212, 170, 0.05);
@@ -88,10 +233,29 @@ body {
   transform: translateY(-1px);
 }
 
+/* Light Mode Blockchain Cards */
+.light .blockchain-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  backdrop-filter: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.light .blockchain-card:hover {
+  background: var(--bg-secondary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
 .tech-border {
   border: 2px solid transparent;
   background: linear-gradient(45deg, var(--blockchain-primary), var(--eco-tech-accent)) border-box;
   border-radius: 10px;
+}
+
+/* Light Mode Tech Border */
+.light .tech-border {
+  border: 2px solid var(--border-medium);
+  background: var(--bg-card);
 }
 
 /* Matrix/Code Effect - No Glow */
@@ -99,6 +263,11 @@ body {
   font-family: 'Courier New', monospace;
   color: var(--blockchain-matrix);
   /* Removed all text-shadow for clean look */
+}
+
+/* Light Mode Matrix Text */
+.light .matrix-text {
+  color: var(--text-accent);
 }
 
 /* Environmental Elements - Clean Minimalist */
@@ -110,12 +279,28 @@ body {
   font-weight: bold;
 }
 
+/* Light Mode Eco Gradient Text */
+.light .eco-gradient-text {
+  background: linear-gradient(45deg, var(--text-primary), var(--text-accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .nature-card {
   background: rgba(76, 175, 80, 0.05);
   border: 1px solid var(--nature-secondary);
   border-radius: 15px;
   backdrop-filter: blur(8px);
   /* Removed all box-shadow for clean look */
+}
+
+/* Light Mode Nature Cards */
+.light .nature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  backdrop-filter: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Hybrid Blockchain-Eco Elements - Clean Minimalist */
@@ -255,6 +440,24 @@ body {
 .bg-eco { background-color: var(--nature-secondary); }
 .bg-eco-tech { background-color: var(--eco-tech-primary); }
 
+/* Light Mode Utility Classes */
+.light .text-blockchain { color: var(--text-accent); }
+.light .text-eco { color: var(--text-accent); }
+.light .text-eco-tech { color: var(--text-accent); }
+.light .bg-blockchain { background-color: var(--green-subtle); }
+.light .bg-eco { background-color: var(--green-subtle); }
+.light .bg-eco-tech { background-color: var(--green-subtle); }
+
+/* Light Mode Tailwind Override Classes */
+.light-bg-primary { background-color: var(--bg-primary) !important; }
+.light-bg-secondary { background-color: var(--bg-secondary) !important; }
+.light-bg-card { background-color: var(--bg-card) !important; }
+.light-text-primary { color: var(--text-primary) !important; }
+.light-text-secondary { color: var(--text-secondary) !important; }
+.light-text-muted { color: var(--text-muted) !important; }
+.light-border { border-color: var(--border-light) !important; }
+.light-border-medium { border-color: var(--border-medium) !important; }
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .blockchain-card,
@@ -289,4 +492,189 @@ body {
     border: 1px solid #ccc;
     box-shadow: none;
   }
+}
+
+/* Sidebar Navigation Hover States */
+.hover\:bg-gray-600:hover {
+  background-color: #4b5563 !important;
+}
+
+/* Dark mode sidebar hover */
+.bg-gray-900 .hover\:bg-gray-600:hover {
+  background-color: #4b5563 !important;
+}
+
+/* Light mode sidebar hover override */
+.light-mode .hover\:bg-gray-600:hover {
+  background-color: #9ca3af !important;
+}
+
+/* Theme-aware background and content classes */
+.theme-bg-primary {
+  background-color: #111827; /* gray-900 */
+}
+
+.theme-bg-overlay {
+  background-color: rgba(17, 24, 39, 0.95); /* gray-900/95 */
+}
+
+.theme-card {
+  background-color: #1f2937; /* gray-800 */
+  border-color: #374151; /* gray-700 */
+}
+
+.theme-text-primary {
+  color: #ffffff;
+}
+
+.theme-text-secondary {
+  color: #9ca3af; /* gray-400 */
+}
+
+.theme-text-muted {
+  color: #6b7280; /* gray-500 */
+}
+
+.theme-text-content {
+  color: #d1d5db; /* gray-300 */
+}
+
+.theme-prose {
+  color: #d1d5db;
+}
+
+/* Light mode overrides */
+.light-mode .theme-bg-primary {
+  background-color: #ffffff !important;
+}
+
+/* Ensure primary background stays fixed in light mode - no hover effects */
+.light-mode .theme-bg-primary:hover {
+  background-color: #ffffff !important; /* Keep same as non-hover */
+}
+
+.light-mode .theme-bg-overlay {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.light-mode .theme-card {
+  background-color: #f9fafb !important; /* gray-50 */
+  border-color: #d1d5db !important; /* gray-300 */
+}
+
+/* Ensure theme-card background stays fixed in light mode - no hover effects */
+.light-mode .theme-card:hover {
+  background-color: #f9fafb !important; /* Keep same as non-hover */
+}
+
+.light-mode .theme-text-primary {
+  color: #111827 !important; /* gray-900 */
+}
+
+.light-mode .theme-text-secondary {
+  color: #6b7280 !important; /* gray-500 */
+}
+
+.light-mode .theme-text-muted {
+  color: #9ca3af !important; /* gray-400 */
+}
+
+.light-mode .theme-text-content {
+  color: #374151 !important; /* gray-700 */
+}
+
+.light-mode .theme-prose {
+  color: #374151 !important;
+}
+
+/* Light mode forest texture - increase visibility */
+.light-mode .forest-texture::before {
+  opacity: 0.08 !important;
+  filter: grayscale(80%) brightness(1.5) !important;
+}
+
+/* Standardized theme border classes */
+.theme-border-standard {
+  border-color: #374151; /* gray-700 */
+}
+
+.theme-border-accent {
+  border-color: #22c55e; /* green-500 */
+}
+
+.theme-border-card {
+  border-color: #374151; /* gray-700 */
+}
+
+/* Light mode overrides for borders */
+.light-mode .theme-border-standard {
+  border-color: #d1d5db !important; /* gray-300 */
+}
+
+.light-mode .theme-border-accent {
+  border-color: #16a34a !important; /* green-600 */
+}
+
+.light-mode .theme-border-card {
+  border-color: #d1d5db !important; /* gray-300 */
+}
+
+/* Additional theme classes for contact page */
+.theme-text-accent {
+  color: #4ade80; /* green-400 */
+}
+
+.theme-link {
+  color: #60a5fa; /* blue-400 */
+}
+
+.theme-link:hover {
+  color: #93c5fd; /* blue-300 */
+}
+
+.theme-border {
+  border-color: #374151; /* gray-700 */
+}
+
+.theme-cta {
+  background-color: #374151; /* gray-700 */
+}
+
+.theme-button {
+  background-color: #16a34a; /* green-600 */
+  color: #ffffff;
+}
+
+.theme-button:hover {
+  background-color: #15803d; /* green-700 */
+}
+
+/* Light mode overrides for contact page */
+.light-mode .theme-text-accent {
+  color: #16a34a !important; /* green-600 */
+}
+
+.light-mode .theme-link {
+  color: #2563eb !important; /* blue-600 */
+}
+
+.light-mode .theme-link:hover {
+  color: #1d4ed8 !important; /* blue-700 */
+}
+
+.light-mode .theme-border {
+  border-color: #d1d5db !important; /* gray-300 - consistent with theme-card */
+}
+
+.light-mode .theme-cta {
+  background-color: #f3f4f6 !important; /* gray-100 */
+}
+
+.light-mode .theme-button {
+  background-color: #16a34a !important; /* green-600 */
+  color: #ffffff !important;
+}
+
+.light-mode .theme-button:hover {
+  background-color: #15803d !important; /* green-700 */
 }
