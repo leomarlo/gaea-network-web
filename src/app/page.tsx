@@ -11,15 +11,6 @@ export default function Home() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col min-h-screen">
-        {/* Banner */}
-        <div className="w-full max-h-56 overflow-hidden">
-          <img
-            src="/GAEA_KeyVisual_web.jpg"
-            alt="Gaea Network Key Visual"
-            className="w-full object-cover object-center"
-          />
-        </div>
-
         {/* Main content */}
         <div className="flex-1 flex items-center justify-center px-8 py-10">
           <div className="max-w-4xl mx-auto grid md:grid-cols-[2fr_1fr] gap-10 items-center">

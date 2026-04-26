@@ -14,7 +14,15 @@ export default function Whitepaper() {
         </nav>
       
       <div className="max-w-4xl mx-auto">
-        <div className="p-8 bg-gray-800 rounded-xl border border-gray-700 shadow-lg theme-card theme-border-card">
+        <div className="bg-gray-800 rounded-xl border border-gray-700 shadow-lg theme-card theme-border-card overflow-hidden">
+          <div className="w-full">
+            <img
+              src="/GAEA_KeyVisual_web.jpg"
+              alt="Gaea Network Key Visual"
+              className="w-full"
+            />
+          </div>
+          <div className="p-8">
           <div className="flex items-start mb-6">
             <DocumentTextIcon className="h-8 w-8 text-green-400 mr-3 mt-1" />
             <div>
@@ -179,6 +187,7 @@ export default function Whitepaper() {
 
             </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
