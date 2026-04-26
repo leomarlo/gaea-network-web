@@ -19,7 +19,7 @@ export default function Contact() {
                 <section>
                   <h2 className="text-2xl font-bold mb-6 text-white theme-text-primary">Get in Touch</h2>
                   <p className="mb-6">
-                    We're excited to connect with individuals and organizations who share our vision for environmental conservation through blockchain technology. Whether you're an investor, developer, conservationist, or simply curious about our mission, we'd love to hear from you.
+                    We&apos;re excited to connect with individuals and organizations who share our vision for environmental conservation through blockchain technology. Whether you&apos;re an investor, developer, conservationist, or simply curious about our mission, we&apos;d love to hear from you.
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-8">
@@ -38,7 +38,7 @@ export default function Contact() {
 
                     {/* Areas of Interest */}
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-4 theme-text-primary">We're Looking For</h3>
+                      <h3 className="text-xl font-semibold text-white mb-4 theme-text-primary">We&apos;re Looking For</h3>
                       <ul className="space-y-2">
                         <li className="flex items-start">
                           <span className="text-green-400 mr-2 theme-text-accent">•</span>
@@ -69,7 +69,7 @@ export default function Contact() {
                 <section className="border-t border-gray-700 pt-8 theme-border">
                   <h3 className="text-xl font-semibold text-white mb-4 theme-text-primary">Our Mission</h3>
                   <p>
-                    Gaea Network is pioneering the intersection of blockchain technology and environmental conservation. By creating asset-backed cryptocurrencies tied to real nature reserves, we're building a sustainable financial ecosystem that directly funds conservation efforts while providing transparent, measurable environmental impact.
+                    Gaea Network is pioneering the intersection of blockchain technology and environmental conservation. By creating asset-backed cryptocurrencies tied to real nature reserves, we&apos;re building a sustainable financial ecosystem that directly funds conservation efforts while providing transparent, measurable environmental impact.
                   </p>
                 </section>
 
@@ -77,7 +77,7 @@ export default function Contact() {
                 <section className="text-center bg-gray-700 rounded-lg p-6 theme-cta">
                   <h3 className="text-xl font-semibold text-white mb-3 theme-text-primary">Join the Movement</h3>
                   <p className="mb-4">
-                    Ready to be part of the solution? Whether you want to contribute your expertise, invest in our mission, or learn more about our approach, we're here to collaborate.
+                    Ready to be part of the solution? Whether you want to contribute your expertise, invest in our mission, or learn more about our approach, we&apos;re here to collaborate.
                   </p>
                   <a 
                     href="mailto:mail@gaea.network?subject=Interest in Gaea Network" 
@@ -90,7 +90,7 @@ export default function Contact() {
                 {/* Quote */}
                 <section className="text-center">
                   <blockquote className="border-l-4 border-green-500 pl-6 py-2 italic text-green-300">
-                    &ldquo;Unless someone like you cares a whole awful lot, nothing is going to get better. It's not.&rdquo;
+                    &ldquo;Unless someone like you cares a whole awful lot, nothing is going to get better. It&apos;s not.&rdquo;
                     <footer className="text-sm text-gray-400 mt-2">— The Lorax by Dr. Seuss</footer>
                   </blockquote>
                 </section>
