@@ -6,7 +6,7 @@ export default function Contact() {
 
       <div className="relative z-10">
         {/* Header */}
-        <header className="text-center mb-12">
+        <header className="text-center mb-12"> 
           <h1 className="text-3xl font-bold text-white mb-4 theme-text-primary">Contact</h1>
         </header>
 
