@@ -4,34 +4,36 @@ import { DocumentTextIcon } from '@heroicons/react/24/outline'
 
 export default function Whitepaper() {
   return (
-    <div className="p-8 bg-gray-900 min-h-screen">
-      <nav className="flex justify-between items-center mb-12 max-w-6xl mx-auto">
-        <h1 className="text-3xl title-font text-white">Whitepaper</h1>
-      </nav>
+    <div className="p-8 bg-gray-900 min-h-screen forest-texture theme-bg-primary">
+      {/* Background overlay with higher opacity for better text readability */}
+      <div className="absolute inset-0 bg-gray-900/95 theme-bg-overlay"></div>
+      
+      <div className="relative z-10">
+        <nav className="flex justify-between items-center mb-12 max-w-6xl mx-auto">
+          <h1 className="text-3xl title-font text-white theme-text-primary">Whitepaper</h1>
+        </nav>
       
       <div className="max-w-4xl mx-auto">
-        <div className="p-8 bg-gray-800 rounded-xl border-2 border-gray-700 shadow-lg">
-          <div className="flex items-center mb-6">
-            <DocumentTextIcon className="h-8 w-8 text-green-400 mr-3" />
-            <h2 className="text-2xl font-bold text-white">Project Gaea</h2>
-            <span className="text-lg text-gray-400 ml-2">Value to our planet&apos;s nature reserves</span>
+        <div className="p-8 bg-gray-800 rounded-xl border border-gray-700 shadow-lg theme-card theme-border-card">
+          <div className="flex items-start mb-6">
+            <DocumentTextIcon className="h-8 w-8 text-green-400 mr-3 mt-1" />
+            <div>
+              <h2 className="text-2xl font-bold text-white theme-text-primary">Project Gaea</h2>
+              <p className="text-lg text-gray-400 mb-1 theme-text-secondary">Value to our planet&apos;s nature reserves</p>
+              <p className="text-sm text-gray-500 theme-text-muted">Fabian Schroeder - January 2025</p>
+            </div>
           </div>
           
-          <div className="text-center mb-8 text-gray-400">
-            <p>Gaea Network</p>
-            <p>January, 2025</p>
-          </div>
-          
-          <div className="prose prose-invert max-w-none">
-            <div className="text-gray-300 space-y-6 leading-relaxed">
+          <div className="prose prose-invert max-w-none theme-prose">
+            <div className="text-gray-300 space-y-6 leading-relaxed theme-text-content">
               
               <section>
-                <h3 className="text-xl font-semibold text-white mb-4">Abstract</h3>
+                <h3 className="text-xl font-semibold text-white mb-4 theme-text-primary">Abstract</h3>
                 <p>
                   The Earth&apos;s ecological balance is under greater threat than ever before. Human economic activity is devastating intact ecosystems at an alarming rate, and this destruction will continue as long as exploitation remains the only recognised economic value of nature. Project Gaea seeks to challenge this paradigm by introducing an asset-backed cryptocurrency rooted in the most fundamental and irreplaceable asset—nature itself. By tokenising nature reserves and creating a tradable currency, we aim to assign nature an economic value that surpasses the value of its exploitation, ensuring that its preservation serves our collective economic interests.
                 </p>
                 
-                <blockquote className="border-l-4 border-green-500 pl-6 py-2 italic text-green-300 text-center">
+                <blockquote className="border-l-4 border-green-500 pl-6 py-2 italic text-green-300 text-center theme-border-accent">
                   &ldquo;You may say I&apos;m a dreamer.<br />
                   But I&apos;m not the only one.&rdquo;
                   <footer className="text-sm text-gray-400 mt-2">(John Lennon)</footer>
@@ -39,7 +41,7 @@ export default function Whitepaper() {
               </section>
 
               <section>
-                <h3 className="text-xl font-semibold text-white mb-4">Introduction</h3>
+                <h3 className="text-xl font-semibold text-white mb-4 theme-text-primary">Introduction</h3>
                 <p>
                   The survival of human civilisation is inextricably linked to the health of our planet&apos;s ecosystems. However, untouched natural habitats are vanishing at an alarming rate in the 21st century. In just a few generations, humans have deforested over 50% of Western Europe and Eastern America, leaving only 4.06 billion hectares of forests worldwide, of which a mere 1.11 billion hectares remain as primary forests—the last truly undisturbed ecosystems. Meanwhile, the extinction crisis and accelerating climate change threaten the very foundation of human well-being. The primary driver of this destruction is human economic activity, particularly the expansion of agricultural land and resource extraction. The core issue lies in the fact that intact nature holds little direct economic value for our economic system. Even as we begin to recognise the existential importance of preserving ecosystems, the free-rider problem—where private landowners prioritise short-term gains over long-term environmental benefits—remains a significant barrier to large-scale conservation.
                 </p>
@@ -64,7 +66,7 @@ export default function Whitepaper() {
               </section>
 
               <section>
-                <h3 className="text-xl font-semibold text-white mb-4">GaeaCoin: A Cryptocurrency with Real Value</h3>
+                <h3 className="text-xl font-semibold text-white mb-4 theme-text-primary">GaeaCoin: A Cryptocurrency with Real Value</h3>
                 <p>
                   A cryptocurrency is a digital asset designed to function as a medium of storage and exchange, where ownership records are securely stored in a distributed ledger. The blockchain is the most widely used form of a distributed ledger, as it solves the fundamental problem of establishing a single, verifiable source of truth in a decentralised system. Cryptocurrencies have proven to be the most successful application of blockchain technology due to their immutability (ensuring past transactions cannot be altered), trustless operation (requiring no trust between users), and decentralised nature (eliminating the need for central institutions). They build on strong cryptographic protocols to secure transaction records, regulate the issuance of new tokens, and verify ownership transfers. The technical challenge of creating trustless digital tokens has already been solved, with the ERC-20 token standard on the Ethereum network serving as the industry benchmark for secure and interoperable tokenisation.
                 </p>
@@ -175,6 +177,7 @@ export default function Whitepaper() {
                 </blockquote>
               </section>
 
+            </div>
             </div>
           </div>
         </div>
