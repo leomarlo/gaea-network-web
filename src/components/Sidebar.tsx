@@ -11,7 +11,9 @@ import {
   DocumentTextIcon,
   ClipboardDocumentListIcon,
   EnvelopeIcon,
+  InformationCircleIcon,
 } from '@heroicons/react/24/outline'
+import { SimpleThemeToggle } from './SimpleThemeToggle'
 
 function GitHubIcon({ className }: { className?: string }) {
   return (
@@ -20,7 +22,6 @@ function GitHubIcon({ className }: { className?: string }) {
     </svg>
   )
 }
-import { SimpleThemeToggle } from './SimpleThemeToggle'
 
 const navigation = [
   { name: 'Start', href: '/', icon: HomeIcon },
@@ -28,6 +29,7 @@ const navigation = [
   { name: 'Whitepaper', href: '/whitepaper', icon: DocumentTextIcon },
   { name: 'Project Plan', href: '/project-plan', icon: ClipboardDocumentListIcon },
   { name: 'Contact', href: '/contact', icon: EnvelopeIcon },
+  { name: 'Impressum', href: '/impressum', icon: InformationCircleIcon },
 ]
 
 export function Sidebar() {
@@ -50,7 +52,7 @@ export function Sidebar() {
 
       {/* Mobile overlay */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-70 z-40 lg:hidden"
           onClick={closeSidebar}
         />
@@ -62,14 +64,24 @@ export function Sidebar() {
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         lg:translate-x-0 lg:static lg:z-auto
       `}>
-        {/* Sidebar header with centered logo */}
-        <div className="flex items-center justify-center p-6 border-b border-gray-700 theme-border-standard">
-          {/* Gaea Network Logo - Centered and Large */}
-          <img 
-            src="/logo.png" 
-            alt="Gaea Network Logo" 
+        {/* Sidebar header: logo + GitHub link */}
+        <div className="flex flex-col items-center p-6 border-b border-gray-700 theme-border-standard gap-3">
+          <span className="text-white font-semibold text-sm tracking-wide text-center">The Gaea Network</span>
+          <img
+            src="/logo.png"
+            alt="Gaea Network Logo"
             className="w-24 h-24 flex-shrink-0"
           />
+          <a
+            href="https://github.com/gaea-net/model"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-200 transition-colors"
+            aria-label="GitHub repository"
+          >
+            <GitHubIcon className="h-4 w-4" />
+            <span>GitHub</span>
+          </a>
           {/* Mobile close button */}
           <button
             onClick={closeSidebar}
@@ -92,8 +104,8 @@ export function Sidebar() {
                     onClick={closeSidebar}
                     className={`
                       flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors
-                      ${isActive 
-                        ? 'bg-gray-800 text-white' 
+                      ${isActive
+                        ? 'bg-gray-800 text-white'
                         : 'text-gray-300 hover:bg-gray-600 hover:text-white'
                       }
                     `}
@@ -107,7 +119,7 @@ export function Sidebar() {
           </ul>
         </nav>
 
-        {/* Theme Toggle - positioned at bottom */}
+        {/* Theme Toggle */}
         <div className="px-3 pb-4">
           <div className="flex items-center justify-between border-t border-gray-700 pt-4 theme-border-standard">
             <span className="text-xs font-medium text-gray-400">
@@ -119,25 +131,8 @@ export function Sidebar() {
 
         {/* Sidebar footer */}
         <div className="p-6 border-t border-gray-700 mt-auto theme-border-standard">
-          <div className="text-xs text-gray-400 text-center space-y-2">
-            <div>
-              <a
-                href="https://github.com/leomarlo/gaea-network-web"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 hover:text-gray-200 transition-colors"
-                aria-label="GitHub repository"
-              >
-                <GitHubIcon className="h-4 w-4" />
-                <span>GitHub</span>
-              </a>
-            </div>
-            <div>© 2026 Gaea.network</div>
-            <div>
-              <Link href="/impressum" onClick={closeSidebar} className="hover:text-gray-200 underline">
-                Impressum
-              </Link>
-            </div>
+          <div className="text-xs text-gray-400 text-center">
+            © 2026 Gaea.network
           </div>
         </div>
       </div>
